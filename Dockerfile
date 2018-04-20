@@ -5,18 +5,10 @@ RUN apt-get -y update && \
     apt-get -y install curl && \
     apt-get -y install default-jre
 
-#RUN curl https://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.1.0.cuda9-1/x86_64-centos7/dai-1.1.0-1.x86_64.rpm --output /tmp/dai-1.1.0-1.x86_64.rpm
+RUN curl https://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.1.0-5/x86_64-centos7/dai_1.1.0_amd64.deb
 
-#RUN apt-get -y install alien
-
-#RUN cd /tmp && \
-#    alien -k dai-1.1.0-1.x86_64.rpm && \
-#    dpkg -i --force-architecture dai_1.1.0-1_amd64.deb
-
-RUN curl https://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.1.0.cuda9-1/x86_64-ubuntu16/dai_1.1.0-1_amd64.deb --output dai_1.1.0-1_amd64.deb
-
-RUN dpkg -i --force-architecture dai_1.1.0-1_amd64.deb && \
-    rm dai_1.1.0-1_amd64.deb
+RUN dpkg -i --force-architecture dai_1.1.0_amd64.deb && \
+    rm dai_1.1.0_amd64.deb
 
 RUN curl -H 'Cache-Control: no-cache' \
     https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh \
