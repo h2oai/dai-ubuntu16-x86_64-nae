@@ -13,8 +13,6 @@ RUN curl -H 'Cache-Control: no-cache' \
     https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh \
     | bash
 
-RUN chown -R nimbix:nimbix /opt/h2oai
-
 # Expose port 22 for local JARVICE emulation in docker
 EXPOSE 22
 EXPOSE 12345
