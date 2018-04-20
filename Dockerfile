@@ -11,7 +11,7 @@ RUN apt-get -y install alien
 
 RUN cd /tmp && \
     alien -k dai-1.1.0-1.x86_64.rpm && \
-    dpkg -i --force-architecture dai-1.1.0-1.x86_64.deb
+    dpkg -i --force-architecture dai_1.1.0-1_amd64.deb
 
 RUN curl -H 'Cache-Control: no-cache' \
     https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh \
