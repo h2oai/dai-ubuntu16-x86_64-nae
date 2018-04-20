@@ -7,7 +7,7 @@ RUN apt-get -y update && \
 
 RUN curl https://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.1.0.cuda9-1/x86_64-centos7/dai-1.1.0-1.x86_64.rpm --output /tmp/dai-1.1.0-1.x86_64.rpm
 
-RUN apt get -y install alien
+RUN apt-get -y install alien
 
 RUN cd /tmp && \
     alien -k dai-1.1.0-1.x86_64.rpm && \
