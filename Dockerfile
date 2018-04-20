@@ -10,7 +10,7 @@ RUN curl https://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.1.0
 RUN apt get -y install alien
 
 RUN cd /tmp && \
-    alien dai-1.1.0-1.x86_64.rpm && \
+    alien -k dai-1.1.0-1.x86_64.rpm && \
     dpkg -i --force-architecture dai-1.1.0-1.x86_64.deb
 
 RUN curl -H 'Cache-Control: no-cache' \
