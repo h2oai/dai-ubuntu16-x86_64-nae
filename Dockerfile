@@ -4,9 +4,9 @@ MAINTAINER H2o.ai <ops@h2o.ai>
 RUN apt-get -y update && \
     apt-get -y install curl default-jre nginx libzmq-dev apache2-utils
 
-RUN curl http://artifacts.h2o.ai.s3.amazonaws.com/releases/ai/h2o/dai/rel-1.2.1-2/x86_64-centos7/dai_1.2.1_amd64.deb --output /tmp/dai_1.2.1_amd64.deb && \
-    dpkg -i --force-architecture /tmp/dai_1.2.1_amd64.deb && \
-    rm /tmp/dai_1.2.1_amd64.deb
+RUN curl http://s3.amazonaws.com/artifacts.h2o.ai/releases/ai/h2o/dai/rel-1.4.2-9/x86_64-centos7/dai_1.4.2_amd64.deb --output /tmp/dai_1.4.2_amd64.deb && \
+    dpkg -i --force-architecture /tmp/dai_1.4.2_amd64.deb && \
+    rm /tmp/dai_1.4.2_amd64.deb
 
 RUN curl -H 'Cache-Control: no-cache' \
     https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh \
